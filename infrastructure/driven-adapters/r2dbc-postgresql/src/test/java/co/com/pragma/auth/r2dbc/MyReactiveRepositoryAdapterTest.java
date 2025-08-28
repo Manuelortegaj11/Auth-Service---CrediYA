@@ -1,5 +1,7 @@
 package co.com.pragma.auth.r2dbc;
 
+import co.com.pragma.auth.r2dbc.repositories.Role.RoleReactiveRepository;
+import co.com.pragma.auth.r2dbc.repositories.Role.RoleRepositoryAdapter;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -19,10 +21,10 @@ class MyReactiveRepositoryAdapterTest {
     // TODO: change four you own tests
 
     @InjectMocks
-    MyReactiveRepositoryAdapter repositoryAdapter;
+    RoleRepositoryAdapter repositoryAdapter;
 
     @Mock
-    MyReactiveRepository repository;
+    RoleReactiveRepository repository;
 
     @Mock
     ObjectMapper mapper;

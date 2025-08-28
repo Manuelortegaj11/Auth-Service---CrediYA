@@ -21,8 +21,8 @@ public class RoleUseCase implements IRoleUseCase {
     }
 
     @Override
-    public Mono<Role> findById(Long id) {
-        return roleRepository.findById(id);
+    public Mono<Role> findById(Long idRole) {
+        return roleRepository.findById(idRole);
     }
 
     @Override

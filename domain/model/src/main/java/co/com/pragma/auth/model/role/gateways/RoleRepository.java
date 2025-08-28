@@ -4,6 +4,6 @@ import reactor.core.publisher.Mono;
 
 public interface RoleRepository {
     Mono<Role> save(Role role);
-    Mono<Role> findById(Long id);
+    Mono<Role> findById(Long idRole);
     Mono<Boolean> existsByName(String name);
 }
