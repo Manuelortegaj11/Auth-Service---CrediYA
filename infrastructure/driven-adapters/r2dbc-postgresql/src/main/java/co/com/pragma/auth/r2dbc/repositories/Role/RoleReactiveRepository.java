@@ -1,9 +1,9 @@
 package co.com.pragma.auth.r2dbc.repositories.Role;
-
+import co.com.pragma.auth.r2dbc.entities.RoleEntity;
 import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import reactor.core.publisher.Mono;
 
-// TODO: This file is just an example, you should delete or modify it
-public interface RoleReactiveRepository extends ReactiveCrudRepository<Object, String>, ReactiveQueryByExampleExecutor<Object> {
-
+public interface RoleReactiveRepository extends ReactiveCrudRepository<RoleEntity, Long>, ReactiveQueryByExampleExecutor<RoleEntity> {
+    Mono<Boolean> existsByName(String name);
 }
