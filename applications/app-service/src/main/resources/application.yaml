@@ -1,5 +1,6 @@
 server:
   port: 8080
+
 spring:
   application:
     name: "AuthService"
@@ -11,6 +12,7 @@ spring:
       path: "/h2"
   profiles:
     include: null
+
 management:
   endpoints:
     web:
@@ -20,5 +22,21 @@ management:
     health:
       probes:
         enabled: true
+
 cors:
   allowed-origins: "http://localhost:4200,http://localhost:8080"
+
+routes:
+  paths:
+    tasks: "/api/v1/tasks"
+    tasksById: "/api/v1/tasks/{id}"
+
+adapters:
+  r2dbc:
+    host: "localhost"
+    port: 5432
+    database: "postgres"   # 👈 recuerda que por defecto entras a esta DB
+    schema: "public"
+    username: "root"
+    password: "progresoempresarial11"
+
