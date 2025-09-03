@@ -1,4 +1,4 @@
-package co.com.pragma.auth.r2dbc.repositories.Role;
+package co.com.pragma.auth.r2dbc.repositories.role;
 import co.com.pragma.auth.r2dbc.entities.RoleEntity;
 import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;

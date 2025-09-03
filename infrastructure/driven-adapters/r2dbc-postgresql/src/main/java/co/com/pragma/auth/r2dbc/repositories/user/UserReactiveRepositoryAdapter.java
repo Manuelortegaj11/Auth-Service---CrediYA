@@ -1,4 +1,4 @@
-package co.com.pragma.auth.r2dbc.repositories.User;
+package co.com.pragma.auth.r2dbc.repositories.user;
 import co.com.pragma.auth.model.user.User;
 import co.com.pragma.auth.model.user.gateways.UserRepository;
 import co.com.pragma.auth.r2dbc.entities.UserEntity;

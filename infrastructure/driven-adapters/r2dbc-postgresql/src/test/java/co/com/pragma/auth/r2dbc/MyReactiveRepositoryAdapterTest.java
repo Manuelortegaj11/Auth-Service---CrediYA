@@ -1,6 +1,5 @@
 package co.com.pragma.auth.r2dbc;
-
-import co.com.pragma.auth.r2dbc.repositories.Role.RoleReactiveRepository;
+import co.com.pragma.auth.r2dbc.repositories.role.RoleReactiveRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

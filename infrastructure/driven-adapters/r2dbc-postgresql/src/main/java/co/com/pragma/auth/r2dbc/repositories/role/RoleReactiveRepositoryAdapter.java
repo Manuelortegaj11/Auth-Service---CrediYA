@@ -1,4 +1,4 @@
-package co.com.pragma.auth.r2dbc.repositories.Role;
+package co.com.pragma.auth.r2dbc.repositories.role;
 import co.com.pragma.auth.model.role.Role;
 import co.com.pragma.auth.model.role.gateways.RoleRepository;
 import co.com.pragma.auth.r2dbc.entities.RoleEntity;
