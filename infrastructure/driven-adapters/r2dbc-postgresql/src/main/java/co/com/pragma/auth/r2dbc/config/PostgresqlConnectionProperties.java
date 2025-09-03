@@ -1,9 +1,9 @@
 package co.com.pragma.auth.r2dbc.config;
 
 // TODO: Load properties from the application.yaml file or from secrets manager
-// import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
-// @ConfigurationProperties(prefix = "adapters.r2dbc")
+@ConfigurationProperties(prefix = "adapters.r2dbc")
 public record PostgresqlConnectionProperties(
         String host,
         Integer port,

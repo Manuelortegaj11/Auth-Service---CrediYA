@@ -4,13 +4,9 @@ server:
 spring:
   application:
     name: "AuthService"
-  r2dbc:
-    url: r2dbc:postgresql://localhost:5432/postgres
-    username: root
-    password: progresoempresarial11
   h2:
     console:
-      enabled: false  # Desactivar H2 ya que usas PostgreSQL
+      enabled: false
 
 adapters:
   r2dbc:
@@ -26,10 +22,15 @@ management:
     web:
       exposure:
         include: "health,prometheus"
-  endpoint:
-    health:
-      probes:
-        enabled: true
+    endpoint:
+      health:
+        probes:
+          enabled: true
 
 cors:
   allowed-origins: "http://localhost:4200,http://localhost:8080"
+
+logging:
+  level:
+    org.springframework.data: DEBUG
+    io.r2dbc: DEBUG
