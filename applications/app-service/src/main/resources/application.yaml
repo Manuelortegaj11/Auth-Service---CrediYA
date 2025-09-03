@@ -4,14 +4,22 @@ server:
 spring:
   application:
     name: "AuthService"
-  devtools:
-    add-properties: false
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: root
+    password: progresoempresarial11
   h2:
     console:
-      enabled: true
-      path: "/h2"
-  profiles:
-    include: null
+      enabled: false  # Desactivar H2 ya que usas PostgreSQL
+
+adapters:
+  r2dbc:
+    host: "localhost"
+    port: 5432
+    database: "postgres"
+    schema: "public"
+    username: "root"
+    password: "progresoempresarial11"
 
 management:
   endpoints:
@@ -25,18 +33,3 @@ management:
 
 cors:
   allowed-origins: "http://localhost:4200,http://localhost:8080"
-
-routes:
-  paths:
-    tasks: "/api/v1/tasks"
-    tasksById: "/api/v1/tasks/{id}"
-
-adapters:
-  r2dbc:
-    host: "localhost"
-    port: 5432
-    database: "postgres"   # 👈 recuerda que por defecto entras a esta DB
-    schema: "public"
-    username: "root"
-    password: "progresoempresarial11"
-
