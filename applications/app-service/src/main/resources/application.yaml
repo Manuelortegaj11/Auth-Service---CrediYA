@@ -12,7 +12,7 @@ adapters:
   r2dbc:
     host: "localhost"
     port: 5432
-    database: "postgres"
+    database: "crediya"
     schema: "public"
     username: "root"
     password: "progresoempresarial11"
@@ -30,7 +30,19 @@ management:
 cors:
   allowed-origins: "http://localhost:4200,http://localhost:8080"
 
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+  show-actuator: true
+
 logging:
   level:
     org.springframework.data: DEBUG
     io.r2dbc: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    co.com.pragma.auth: DEBUG
