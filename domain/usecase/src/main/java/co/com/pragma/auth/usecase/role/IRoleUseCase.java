@@ -1,9 +1,10 @@
-package co.com.pragma.auth.model.role.gateways;
+package co.com.pragma.auth.usecase.role;
+
 import co.com.pragma.auth.model.role.Role;
 import reactor.core.publisher.Mono;
 
-public interface RoleRepository {
+public interface IRoleUseCase {
     Mono<Role> save(Role role);
-    Mono<Role> findById(Long idRole);
+    Mono<Role> findById(Long id);
     Mono<Boolean> existsByName(String name);
 }
